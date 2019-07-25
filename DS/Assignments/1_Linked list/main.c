@@ -2,11 +2,14 @@
 
 int main()
 {
+	//declare the vars
 	slist *head = NULL;
 	data_t data, n_data, g_data;
-	int opt, status;
+	int opt, status, num;
+	//run an infinite while loop
 	while(1)
 	{
+		//print the user options
 		printf("1.insert at last\n 2.insert at fisrt\n 3.delete fisrt\n 4.delete last\n 5.delete list\n 6.find node\n 7.print\n 8.Exit\n 9.Insert after\n 10.delete element\n");
 		scanf("%d", &opt);
 		switch(opt)
@@ -82,14 +85,20 @@ int main()
 			}
 			case 6:
 			{
-				status = find_node(head, data);
+				printf("Enter the node data to find\n");
+				scanf("%d",&num);
+				status = find_node(head, data, num);
 				if(status == SUCCESS)
 				{
-					printf("node find successful\n");
+					printf("node found\n");
+				}
+				else if (status == DATA_NOT_FOUND)
+				{
+					printf("node not found\n");
 				}
 				else
 				{
-					printf("node find unsuccessful\n");
+					printf("Node find unsuccessful\n");
 				}
 				break;
 			}

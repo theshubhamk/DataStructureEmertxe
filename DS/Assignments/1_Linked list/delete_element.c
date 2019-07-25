@@ -28,8 +28,6 @@ int delete_element(slist **head, data_t n_data)
 	{
 		temp1 = temp1->link;	
 	}
-	//temp1 = temp->link;
-	//temp1 = temp1->link;
 	temp1->link = temp->link;
 
 	free(temp);

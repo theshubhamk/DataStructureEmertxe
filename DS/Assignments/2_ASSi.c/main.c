@@ -2,12 +2,15 @@
 
 int main()
 {
+	//declare the variables
 	slist *head = NULL;
 	data_t data, n_data, g_data;
-	int opt, status;
+	int opt, status, n;
+	//run an infinite loop
 	while(1)
 	{
-		printf("1.insert at first\n 7.print\n 8.Exit\n 9.Insert after\n 10.delete element\n");
+		//give user options
+		printf("1.insert at first\n 2.insert before\n 3.Insert Nth\n 7.print\n 8.Exit\n 9.Insert after\n 10.delete element\n");
 		scanf("%d", &opt);
 		switch(opt)
 		{
@@ -23,6 +26,48 @@ int main()
 				else
 				{
 					printf("Head insertion unsuccessful\n");
+				}
+				break;
+			}
+			case 2:
+			{
+				printf("Enter the n_data\n");
+				scanf("%d",&n_data);
+				printf("Enter the g_data\n");
+				scanf("%d",&g_data);				
+				status = insert_before(&head, n_data, g_data);
+				if(status == SUCCESS)
+				{
+					printf("data inserted before \n");
+				}
+				else if(status == DATA_NOT_FOUND)
+				{
+					printf("Data not found in the list\n");
+				}
+				else
+				{
+					printf("data insertion unsuccessful\n");
+				}
+				break;	
+			}
+			case 3:
+			{
+				printf("Enter the nth position at which data needs to be inserted\n");
+				scanf("%d",&n);
+				printf("Enter the g_data\n");
+				scanf("%d",&g_data);				
+				status = insert_nth(&head, g_data, n);
+				if(status == SUCCESS)
+				{
+					printf("data inserted at the %dth position \n", n);
+				}
+				else if(status == OUT_OF_RANGE)
+				{
+					printf("Node is out of range \n");
+				}
+				else
+				{
+					printf("data insertion unsuccessful\n");
 				}
 				break;
 			}

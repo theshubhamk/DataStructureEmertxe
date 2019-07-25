@@ -9,8 +9,10 @@ int delete_first(slist **head)
 	{
 		return FAILURE;
 	}
+	//reassign the head
 	temp = *head;
 	*head = (*head)->link;
+	//delete the node
 	free(temp);
 	return SUCCESS;	
 }

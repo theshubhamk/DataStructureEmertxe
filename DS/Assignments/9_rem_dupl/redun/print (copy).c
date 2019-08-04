@@ -1,6 +1,6 @@
 #include "common.h"
 
-void print_slist(slist *head)
+void dprint_slist(slist *head, data_t data)
 {	
 	//validation if the list empty or not
 	if(head == NULL)
@@ -14,7 +14,7 @@ void print_slist(slist *head)
 		//itirate thru the list
 		while(head)
 		{
-			printf("%d-----> ",head->data);//,(size_t)head->link);
+			printf("%d-----> ",head->data);
 			head = head->link;
 		}
 

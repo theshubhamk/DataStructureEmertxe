@@ -14,7 +14,7 @@ void print_slist(slist *head)
 		//itirate thru the list
 		while(head)
 		{
-			printf("%d-----> ",head->data);//,(size_t)head->link);
+			printf("%d-----> ",head->data);
 			head = head->link;
 		}
 

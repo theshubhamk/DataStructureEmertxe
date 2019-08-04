@@ -21,7 +21,7 @@ int main()
 	printf("Enter the infix elements of the array\n");
 	for(i = 0;i < size;i++)
 	{
-		scanf("\n%c",&infix[i]);
+		scanf("\n%[^\n]c",&infix[i]);
 	}
 	while(1)
 	{

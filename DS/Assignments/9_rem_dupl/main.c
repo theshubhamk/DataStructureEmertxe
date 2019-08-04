@@ -10,16 +10,13 @@ int main()
 	while(1)
 	{
 		//print the user options
-		printf("\nSELECT THE OPERATION TO PERFORM\n");
-		printf("\n1.insert at first\n2.reverse\n3.reverse_val\n4.reverse_recursion\n7.print\n8.Exit\n\n");
+		printf("\n1.insert element\n2.REMOVE duplicates\n3.Palindrome\n4.delete MAX\n7.print\n 8.Exit\n");
 		scanf("%d", &opt);
 		printf("\n");
 		switch(opt)
 		{
-			//insert at first
 			case 1:
 			{
-				//prompt + read user
 				printf("Enter the data\n");
 				scanf("%d",&data);
 				status = insert_at_first(&head, data);
@@ -33,65 +30,48 @@ int main()
 				}
 				break;
 			}
-			//reverse using the node relinking
 			case 2:
 			{
-				status = reverse(&head);
+				status = rem_dupl(&head);
 				if(status == SUCCESS)
 				{
-					printf("reverse successful\n");
-				}
-				else if(status == LIST_EMPTY)
-				{
-					printf("LIST_EMPTY\n");
+					printf("duplicates REMOVEd\n");
 				}
 				else
 				{
-					printf("reverse unsuccessful\n");
+					printf("removal unsuccessful\n");
 				}
-				break;
+				break;	
 			}
-			//reverse using swapping the values
 			case 3:
 			{
-				//call the function
-				status = reverse_val(&head);
+				status = rem_dupl(&head);
 				if(status == SUCCESS)
 				{
-					printf("reverse successful\n");
-				}
-				else if(status == LIST_EMPTY)
-				{
-					printf("LIST_EMPTY\n");
+					printf("duplicates REMOVEd\n");
 				}
 				else
 				{
-					printf("reverse unsuccessful\n");
+					printf("removal unsuccessful\n");
 				}
-				break;
+				break;	
 			}
 			case 4:
 			{
-				//call the function
-				rev_rec(&head);
-				/*
+				status = del_max(&head);
 				if(status == SUCCESS)
 				{
-					printf("reverse successful\n");
-				}
-				else if(status == LIST_EMPTY)
-				{
-					printf("LIST_EMPTY\n");
+					printf("duplicates REMOVEd\n");
 				}
 				else
 				{
-					printf("reverse unsuccessful\n");
-				}*/
+					printf("removal unsuccessful\n");
+				}
 				break;
 			}
-			//print
 			case 7:
 			{
+				//dprint_slist(head,data);
 				print_slist(head);
 				break;
 			}

@@ -4,12 +4,15 @@ float post_fix_eval(char postfix[])
 {
 	float stack[20];
 	int top = -1, i;
+	char temp;
 	for(i = 0;postfix[i];i++)
 	{
 		if(isdigit(postfix[i]))
 		{
 			top++;
-			stack[top] = postfix[i] - 48;
+			//stack[top] = postfix[i] - 48;
+			temp = postfix[i];
+			stack[top] = atof(&temp);
 		}
 		else
 		{

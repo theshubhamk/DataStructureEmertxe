@@ -5,9 +5,9 @@ int main()
     char s1[255], s2[255];
     int l1, l2;
      
-    printf("Enter Number1:");
+    printf("Enter Number1: ");
     scanf("%s", s1);
-    printf("Enter Number2:");
+    printf("Enter Number2: ");
     scanf("%s", s2);
     /* convert character to integer*/
     for (l1 = 0; s1[l1] != '\0'; l1++)

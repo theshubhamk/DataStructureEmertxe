@@ -32,5 +32,6 @@ int delete_first(slist **head);
 int delete_element(slist **head, data_t n_data);
 int rem_dupl(slist **head);
 int del_max(slist **head);
+int pali(slist **head);
 
 #endif

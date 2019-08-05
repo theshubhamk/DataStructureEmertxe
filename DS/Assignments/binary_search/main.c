@@ -25,7 +25,7 @@ int main()
 	while(1)
 	{
 		//prompt + read user
-		printf("\nEnter the option\n1.bin_search\n2.binary_search_recursive\n3.exit\n");
+		printf("\nEnter the option\n1.bin_search\n2.binary_search_recursive\n3.selection sort\n4.insertion sort\n5.print\n6.exit\n");
 		scanf("%d", &opt);
 		printf("\n");
 
@@ -70,6 +70,54 @@ int main()
 				break;
 			}
 			case 3:
+			{
+				int first = 0, last = size - 1;
+				int ret;
+				printf("Enter the data to search\n");
+				scanf("%d", &key);
+				//call the function
+				sort_sel(arr,size);
+				print(arr, size);
+				printf("\n");
+				/*status = binary_search_recursive(arr, first, last, key);
+				//check the status
+				if(status == SUCCESS)
+				{
+					printf("KEY FOUND\n");
+				}
+				else
+				{
+					printf("KEY NOT FOUND\n");
+				}*/
+				break;
+			}
+			case 4:
+			{
+				int first = 0, last = size - 1;
+				int ret;
+				printf("Enter the data to search\n");
+				scanf("%d", &key);
+				//call the function
+				sort_ins(arr,size);
+				print(arr, size);
+				/*
+				status = binary_search_recursive(arr, first, last, key);
+				//check the status
+				if(status == SUCCESS)
+				{
+					printf("KEY FOUND\n");
+				}
+				else
+				{
+					printf("KEY NOT FOUND\n");
+				}*/
+				break;
+			}
+			case 5:
+			{
+				//print(arr, size);
+			}
+			case 6:
 			{
 				exit(0);
 				break;

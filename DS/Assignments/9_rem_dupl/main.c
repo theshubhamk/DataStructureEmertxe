@@ -45,14 +45,14 @@ int main()
 			}
 			case 3:
 			{
-				status = rem_dupl(&head);
+				status = pali(&head);
 				if(status == SUCCESS)
 				{
-					printf("duplicates REMOVEd\n");
+					printf("is Palindrome\n");
 				}
 				else
 				{
-					printf("removal unsuccessful\n");
+					printf("not Palindrome\n");
 				}
 				break;	
 			}

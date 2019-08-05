@@ -25,7 +25,10 @@ enum status
 
 int binary_search(int *arr, int size, int key);
 int bubb_sort(int *arr, int size);
-int binary_search_recursive(int *arr, int first, int last, int key:);
+int binary_search_recursive(int *arr, int first, int last, int key);
+int sort_sel(int *arr, int size);
+void print(int *arr, int size);
+int sort_ins(int *arr, int size);
 /*
 int PUSH(s_array *s, data_t data);
 int POP(s_array *s, data_t *data);

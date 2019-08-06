@@ -20,9 +20,6 @@ enum status
 };
 //declare the functions
 int insert_sorted(slist **head, data_t data);
-int find_loop(slist **head);
-int create_loop(slist **head);
-
 int insert_at_first(slist **head, data_t data);
 void print_slist(slist *head);
 

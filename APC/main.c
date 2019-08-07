@@ -71,19 +71,7 @@ int main()
 			case 2:
 			{
 				//prompt + read user
-				printf("Enter the data\n");
-				scanf("%d",&data);
-				//call the function
-				//status = insert_at_first(&head, data);
-				//check the status
-				if(status == SUCCESS)
-				{
-					printf("Head inserted at first\n");
-				}
-				else
-				{
-					printf("Head insertion unsuccessful\n");
-				}
+				subtract_nodes(&headnum1, &headnum2, &headsum);
 				break;
 			}
 			case 3:

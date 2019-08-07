@@ -23,7 +23,7 @@ enum status
 int insert_sorted(slist **head, data_t data);
 int find_loop(slist **head);
 int create_loop(slist **head);
-
+int subtract_nodes(slist **headnum1, slist **headnum2, slist **headsum);
 int make_group(slist **headnum1, data_t *num1, int length1);
 int insert_at_first(slist **head, data_t data);
 void print_slist(slist *);

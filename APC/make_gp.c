@@ -2,10 +2,9 @@
 
 int make_group(slist **headnum1, data_t *num1, int length1)
 {
-	int i = 0, j = length1 - 1, k, count = length1, n_data, mask, r;
+	int i = 0, j = length1 - 1, k, count = length1, n_data, mask;
 	while(count > 0)
 	{	
-		r = j;
 		if(count < 4 && count > 0)
 		{
 			mask = 1;
@@ -17,13 +16,13 @@ int make_group(slist **headnum1, data_t *num1, int length1)
 			    	printf("%d",num1[k]);
 			    	k++;
 			    }
-			while(num1[r])
+			while(num1[j])
 			{
 				//n_data = (n_data * 10) + num1[j];
-				n_data = n_data + (num1[r] * mask);
+				n_data = n_data + (num1[j] * mask);
 				mask = mask * 10;
-				r--;
-				printf("%d\n",num1[r] );
+				j--;
+				printf("%d\n",num1[j] );
 				printf("\nn_data inside : %d\n",n_data);
 			}
 			printf("\nn_data outside: %d\n",n_data);
@@ -47,7 +46,6 @@ int make_group(slist **headnum1, data_t *num1, int length1)
 			mask = mask * 10;
 			j--;
 		}
-		//r = j;
 		//n_data = rev(n_data);
 		//insert node with n_data;
 		slist *new = malloc(sizeof(slist));

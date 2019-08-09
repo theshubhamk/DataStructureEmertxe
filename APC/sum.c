@@ -6,14 +6,17 @@ int sum_nodes(slist **headnum1, slist **headnum2, slist **headsum)
 	{
 		return FAILURE;
 	}
-	printf("num1: \n");
+				printf("num1: \n");
 				print_slist((*headnum1));
 				printf("\n");
 				printf("num2: \n");
 				print_slist((*headnum2));
+	
 	reverse(&(*headnum1));
 	reverse(&(*headnum2));
-	printf("num1: \n");
+
+				printf("\n");
+				printf("num1: \n");
 				print_slist((*headnum1));
 				printf("\n");
 				printf("num2: \n");
@@ -31,7 +34,7 @@ int sum_nodes(slist **headnum1, slist **headnum2, slist **headsum)
         sum = (temp1->data + temp2->data + carry) % 10000;
         carry = (temp1->data + temp2->data + carry) / 10000;
         printf("\n");
-        printf("%d\n",carry );
+       // printf("%d\n",carry );
         //insert node with n_data;
 		slist *new = malloc(sizeof(slist));
 		//validation

@@ -16,13 +16,17 @@ int make_group(slist **headnum1, data_t *num1, int length1)
 			    	printf("%d",num1[k]);
 			    	k++;
 			    }
-			while(num1[j])
+			//for( ;j > -1;j--)
+			while(j>-1)
 			{
 				//n_data = (n_data * 10) + num1[j];
+				//printf("j:%d\n",j );
+				printf("num[%d]: %d \n",j,num1[j] );
 				n_data = n_data + (num1[j] * mask);
 				mask = mask * 10;
 				j--;
-				printf("%d\n",num1[j] );
+
+				
 				printf("\nn_data inside : %d\n",n_data);
 			}
 			printf("\nn_data outside: %d\n",n_data);

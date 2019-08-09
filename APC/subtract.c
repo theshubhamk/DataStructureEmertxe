@@ -125,7 +125,7 @@ int subtract_nodes(slist **headnum1, slist **headnum2, slist **headsum)
 				printf("\n");
 				printf("num2: \n");
 				print_slist((*headnum2));
-	slist *temp, *temp1, *temp2;
+	slist *temp, *temp1, *temp2, *temp0;
 	temp1 = *headnum1;
 	temp2 = *headnum2;
 	int no_of_nodes1 = 0, no_of_nodes2 = 0, flag = 0, count, tempCount;
@@ -262,6 +262,7 @@ int subtract_nodes(slist **headnum1, slist **headnum2, slist **headsum)
 	int carry = 0;
 	int sum = 0;
 	int sum1 = 0;
+
 	//temp1 = *headnum1;
 	//temp2 = *headnum2;
     while((temp1 && temp2))
@@ -269,7 +270,28 @@ int subtract_nodes(slist **headnum1, slist **headnum2, slist **headsum)
     	if(temp1->data < temp2->data)
     	{
     		temp1->data = temp1->data + 10000;
-    		temp1->link->data = temp1->link->data - 1;
+    		if(temp1->link->data == 0)
+    		{
+    			temp0 = temp1;
+    			while(temp0)
+    			{
+    				temp0 = temp0->link;
+    				temp0->data = 9999;
+    				if(temp0->link->data == 0)
+    				{
+    					continue;
+    				}
+    				else
+    				{
+    					temp0->link->data = temp0->link->data - 1;			
+    					break;
+    				}
+    			}
+    		}
+    		else
+    		{
+    			temp1->link->data = temp1->link->data - 1;
+    		}
     	}
         sum = (temp1->data - temp2->data); //+ carry) % 10000;
         //carry = (temp1->data + temp2->data + carry) / 10000;

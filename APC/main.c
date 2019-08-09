@@ -9,8 +9,13 @@ int main()
 	data_t data, n_data;
 
 	int opt, status, num, n, i, j;
-	char s1[255] = {'\0'}, s2[255] = {'\0'};
-	int num1[255] = {'\0'}, num2[255] = {'\0'}, sum[] = {'\0'};
+	//char s1[] = {'\0'}, s2[] = {'\0'};
+	char *s1 = malloc(sizeof(char) * 100);//, *s2 = 0;
+	char *s2 = malloc(sizeof(char) * 100);
+	int *num1 = malloc(sizeof(int) * 100);
+	int *num2 = malloc(sizeof(int) * 100);
+
+	//int num1[] = {'\0'}, num2[] = {'\0'}, sum[] = {'\0'};
 	
 	//enter the array
 	printf("Enter the 1st number\n");
@@ -48,20 +53,15 @@ int main()
     }*/
     //print numbers
     printf("NUM1: \n");
-    //for (i = 0; i < length1; i++)
-    i = 0;
-    while(num1[i])
+    for (i = 0; i < length1; i++)
     {
     	printf("%d",num1[i]);
-    	i++;
     }
     printf("\n");
-    printf("num2: \n");
-  	j = 0;
-    while(num2[j])
+    printf("NUM2: \n");
+    for (i = 0; i < length2; i++)
     {
-    	printf("%d",num2[j]);
-    	j++;
+    	printf("%d",num2[i]);
     }
 	//run an infinite while loop
 	while(1)
@@ -88,27 +88,9 @@ int main()
 			}
 			case 3:
 			{
-				printf("NUM1: \n");
-			    //for (i = 0; i < length1; i++)
-			    i = 0;
-			    while(num1[i])
-			    {
-			    	printf("%d",num1[i]);
-			    	i++;
-			    }
-			    printf("\n");
-			    
-				
 				//prompt + read user
 				make_group(&headnum1,num1,length1);
-				printf("num2: \n");
-			  	j = 0;
-			    while(num2[j])
-			    {
-			    	printf("%d",num2[j]);
-			    	j++;
-			    }
-				//printf("\n");
+				printf("\n");
 				getchar();
 				make_group(&headnum2,num2,length2);
 				break;

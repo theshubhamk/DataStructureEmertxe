@@ -361,8 +361,8 @@ int subtract_nodes(slist **headnum1, slist **headnum2, slist **headsum)
 			temp2 = temp2->link;
 		}
     }
-    //
-    slist *del = *headsum;
+    //delete the nodes which are at the start and are zero.
+    /*slist *del = *headsum;
     while(del)
     {
     	if(del->data == 0)
@@ -377,7 +377,7 @@ int subtract_nodes(slist **headnum1, slist **headnum2, slist **headsum)
     		break;
     	}
 
-    }
+    }*/
     reverse(&(*headnum1));
 	reverse(&(*headnum2));
 	if(flag == 1)

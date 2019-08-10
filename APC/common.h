@@ -32,5 +32,7 @@ void print_slist(slist *);
 int rev(int n_data);
 int reverse(slist **head);
 int sum_nodes(slist **headnum1, slist **headnum2, slist **headsum);
+int mull(slist **headnum1, slist **headnum2, slist **headsum);
+void printt(slist *head);
 
 #endif

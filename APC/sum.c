@@ -2,9 +2,9 @@
 
 int sum_nodes(slist **headnum1, slist **headnum2, slist **headsum)
 {
-	if(*headnum2 == NULL || *headnum1 == NULL)
+	//if(*headnum2 == NULL || *headnum1 == NULL)
 	{
-		return FAILURE;
+		//return FAILURE;
 	}
 				printf("num1: \n");
 				print_slist((*headnum1));

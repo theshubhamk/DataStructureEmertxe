@@ -161,6 +161,22 @@ int main(int argc, char *argv[])
 					print_slist(headsum);
 					break;
 				}
+				case 'c':
+				{
+					printf("num1: \n");
+					printt(headnum1);
+					printf("\n");
+					printf("num2: \n");
+					printt(headnum2);
+					printf("\n");
+					printf("sum: \n");
+					if(flagg == FLAG)
+					{
+						printf("-");
+					}
+					printt(headsum);
+					break;
+				}
 				//exit
 				case 'b':
 				{
@@ -189,6 +205,12 @@ int main(int argc, char *argv[])
 				{
 					//prompt + read user
 					flagg = subtract_nodes(&headnum1, &headnum2, &headsum);
+					break;
+				}
+				case '*':
+				{
+					printf("mullll\n");
+					mull(&headnum1,&headnum2,&headsum);
 					break;
 				}
 				/*case 3:

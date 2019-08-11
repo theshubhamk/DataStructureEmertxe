@@ -26,7 +26,7 @@ int main()
 	while(1)
 	{
 		//prompt + read user
-		printf("\nEnter the option\n1.Quick Sort\n3.exit\n");
+		printf("\nEnter the option\n1.merge Sort\n3.exit\n");
 		scanf("%d", &opt);
 		printf("\n");
 

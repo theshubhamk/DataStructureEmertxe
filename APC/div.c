@@ -54,7 +54,7 @@ unsigned long long int divI(slist **headnum1, slist **headnum2)
 			printf("headnum2 after sub:============\t");
 			printt(*headnum2);
 			printf("\n");
-			
+			 
 			printf("restemp is:============\t");
 			printt(resTemp);
 			printf("\n");

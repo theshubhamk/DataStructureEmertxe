@@ -34,5 +34,8 @@ int reverse(slist **head);
 int sum_nodes(slist **headnum1, slist **headnum2, slist **headsum);
 int mull(slist **headnum1, slist **headnum2, slist **headsum);
 void printt(slist *head);
-
+int compare(slist **headnum1, slist **headnum2);
+int delete_list(slist **head);
+unsigned long long int divI(slist **headnum1, slist **headnum2);
+int subtraction(slist *num1, slist *num2, slist **result);
 #endif

@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
 	slist *headnum1 = NULL;
 	slist *headnum2 = NULL;
 	slist *headsum = NULL;
+
 	data_t data, n_data;
 
 	int opt, status, num, n, j;
@@ -203,14 +204,23 @@ int main(int argc, char *argv[])
 				//insert the elements at the start of the list
 				case '-':
 				{
+					
 					//prompt + read user
-					flagg = subtract_nodes(&headnum1, &headnum2, &headsum);
+					//flagg = subtract_nodes(&headnum1, &headnum2, &headsum);
+					subtraction(headnum1, headnum2, &headsum);
 					break;
 				}
 				case '*':
 				{
 					printf("mullll\n");
 					mull(&headnum1,&headnum2,&headsum);
+					break;
+				}
+				case '/':
+				{
+					printf("divv\n");
+					unsigned long long int res = divI(&headnum1, &headnum2);
+					printf("div out is : %lld\n", res );
 					break;
 				}
 				/*case 3:

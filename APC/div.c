@@ -4,7 +4,7 @@ unsigned long long int divI(slist **headnum1, slist **headnum2)
 {
 	slist *tempRack = *headnum1, *resTemp ;//= NULL; 
 	unsigned long long int count = 0;
-	int status, comp;
+	int status, comp, remainder = 0;
 
 	/*printf("headnum1 before compare is:============\t");
 			printt(tempRack);
@@ -17,7 +17,10 @@ unsigned long long int divI(slist **headnum1, slist **headnum2)
 	status = compare(headnum1, headnum2);
 
 	if(status == 1)
-	{
+	{	
+		printf("Remiander is : \n"	);
+		print_slist(*headnum1);
+		printf("\n");			
 		return 0;
 	}
 
@@ -61,7 +64,14 @@ unsigned long long int divI(slist **headnum1, slist **headnum2)
 
 			tempRack = NULL;
 			tempRack = resTemp;
-
+			if(resTemp != NULL)
+			{
+				remainder = resTemp->data;
+			}
+			else
+			{
+				remainder = 0;
+			}
 			printf("tempRack is:============\t");
 			printt(tempRack);
 			resTemp = NULL;
@@ -70,7 +80,8 @@ unsigned long long int divI(slist **headnum1, slist **headnum2)
 			printf("count:-------- %lld \n",count );
 		}
 		else
-		{
+		{	
+			printf("Remiander is : %d\n",remainder );
 			return count;
 			break;
 		}

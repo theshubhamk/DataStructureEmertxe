@@ -48,6 +48,9 @@ enum status
 //declare the functions
 int insert_at_first(slist **head_file_list, char_t data);
 int find_file_dupli(slist **head_file_list, char_t newfile);//, int argc);
-int create_database(hash_t table[],char * word_out, char argv[]);
+int create_database(hash_t table[],char * word_out, char *filename);
 void printt(slist *head);
+int insert_at_lastLL1(hash_t **head, int num_of_files, char_t data);
+void fin_printt(hash_t *head);
+int print_table(hash_t array[]);
 #endif

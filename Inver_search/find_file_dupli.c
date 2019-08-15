@@ -4,7 +4,7 @@ int find_file_dupli(slist **head_file_list, char_t newfile)//, int argc)
 {
 	slist *temp = *head_file_list;
 	int i = 1;
-	//printf("%s\n",newfile );
+	//printf("%s\n",newfile);
 	//for (i = 1; i <= argc-1; i++)
 	{
 		//temp = *head_file_list;

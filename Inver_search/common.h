@@ -53,4 +53,6 @@ void printt(slist *head);
 int insert_at_lastLL1(hash_t **head, int num_of_files, char_t data);
 void fin_printt(hash_t *head);
 int print_table(hash_t array[]);
+int save_db(hash_t array[]);
+
 #endif

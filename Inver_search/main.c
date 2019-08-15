@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
 			}
 			case 5:
 			{
-
+				save_db(table);
 				break;
 			}
 			case 6:

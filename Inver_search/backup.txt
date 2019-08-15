@@ -1,0 +1,1 @@
+index: 18	value: sandeep -FC-- 2	File names: zfile6.txt	Word count: 2 	File names: zfile4.txt	Word count: 1 	

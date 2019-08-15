@@ -191,7 +191,15 @@ int main(int argc, char *argv[])
 			}
 			case 4:
 			{
-
+				int status;
+				char * wordd = (char *)malloc(sizeof(char) * 100);
+				printf("Enter the term to search: \t");
+				scanf("%s", wordd);
+				status = search_db(table, wordd);
+				if(status == FAILURE)
+				{
+					printf("data not found in the database\n");
+				}
 				break;
 			}
 			case 5:

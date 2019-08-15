@@ -10,16 +10,13 @@ int save_db(hash_t array[])
 		perror("backup.txt");
 		exit(1);
 	}
-	//chars = fprintf(fp, "Name: %s\t\tRoll no: %d\t\tMarks: %.2f\n",
-    //name, roll_no, marks);
-      // printf("\n%d characters successfully written to the file\n\n", chars);
 
     int i;
 	hash_t *temp;
 	dulist *temp1;
 	for (i = 0; i < SIZE; i++)
 	{
-		printf("hi\n");
+		//	printf("hi\n");
 		temp = &array[i];//.word_link;
 		if(strcmp(temp->word,"#") == 0)
 		{

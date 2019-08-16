@@ -2,49 +2,61 @@
 
 int search_db(hash_t array[], char * word_out)
 {
+	char first_letter;
+	int index;
+	int ascii_val;
+
+	if(isupper(word_out[0]))	
+	{
+		first_letter = tolower(word_out[0]);
+		//printf("%c\n",first_letter );
+	}
+	else
+	{
+		first_letter = word_out[0];
+		//printf("%c\n",first_letter );
+	}
+	if(isdigit(word_out[0]))
+	{
+		index = word_out[0] - 48;
+	}
+	else
+	{
+		ascii_val = first_letter - 97;
+		printf("%s\n",word_out);
+		index =  ascii_val % SIZE;	
+	}
+
 	int i;
 	hash_t *temp;
 	dulist *temp1;
 	int flag = 0;
-	for (i = 0; i < SIZE; i++)
-	{
-		temp = &array[i];//.word_link;
+	//for (i = 0; i < SIZE; i++)
+		temp = &array[index];//.word_link;
 		if(strcmp(temp->word,"#") == 0)
 		{
-			continue;	
+			return FAILURE;	
 		}
-		else if(strcmp(temp->word,word_out) == 0)
-		{
-	
-			printf("index: %d\t", i);
+		//printf("index: %d\t", index);
 			//	printf("num of files: %d\t",temp->no_of_files);
-			printf("value: ");
-			while(temp)
+		while(temp)
+		{
+			if(strcmp(temp->word,word_out) == 0)
 			{	
-				printf("%s -FC-- %d\t", temp->word, temp->no_of_files);
+				printf("The word ");
+				printf("'%s' is in %d files ", temp->word, temp->no_of_files);
 				temp1 = temp->tab_link;
 				while(temp1)
 				{	
-					printf("File names: %s\t", temp1->file_name);
-					printf("Word count: %d \t", temp1->wcnt);
+					printf(" '%s', ", temp1->file_name);
+					printf("appearing %d times \t", temp1->wcnt);
 					temp1 = temp1->dlink;
 				}
-				temp = temp->word_link;
+				printf("\n");
+				return SUCCESS;
 			}
-
-			printf("\n");
+			temp = temp->word_link;
 		}
-		else
-		{
-			flag = 1;
-			continue;
-		}
-	}
-	if(flag == 1)
-	{
-		printf("fasfas\n");
-		return FAILURE;
-	}
-	return SUCCESS;	
+	return FAILURE;	
 }
 

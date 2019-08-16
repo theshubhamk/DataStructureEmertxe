@@ -1,5 +1,27 @@
-index: 0	value: are -FC-- 1	File names: zfile3.txt	Word count: 1 	
-index: 3	value: doing? -FC-- 1	File names: zfile3.txt	Word count: 1 	
-index: 18	value: sandeep -FC-- 2	File names: zfile6.txt	Word count: 2 	File names: zfile4.txt	Word count: 1 	
-index: 22	value: what -FC-- 1	File names: zfile3.txt	Word count: 1 	
-index: 24	value: you -FC-- 1	File names: zfile3.txt	Word count: 1 	
+index: 0	
+The word 'are' is in 1 files: 
+			    'zfile2.txt', appearing 1 times
+
+The word 'aello' is in 1 files: 
+			    'zfile1.txt', appearing 1 times
+****************************************************************************************index: 7	
+The word 'hi' is in 1 files: 
+			    'zfile2.txt', appearing 1 times
+
+The word 'how' is in 1 files: 
+			    'zfile2.txt', appearing 1 times
+
+The word 'hl' is in 1 files: 
+			    'zfile1.txt', appearing 1 times
+
+The word 'how?' is in 1 files: 
+			    'zfile1.txt', appearing 1 times
+****************************************************************************************index: 18	
+The word 'shubham' is in 2 files: 
+			    'zfile6.txt', appearing 4 times
+
+			    'zfile1.txt', appearing 1 times
+****************************************************************************************index: 24	
+The word 'you' is in 1 files: 
+			    'zfile2.txt', appearing 1 times
+****************************************************************************************

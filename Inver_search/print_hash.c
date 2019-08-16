@@ -14,17 +14,19 @@ int print_table(hash_t array[])
 		}
 		printf("index: %d\t", i);
 		//	printf("num of files: %d\t",temp->no_of_files);
-		printf("value: ");
+		//printf("The word : ");
 		while(temp)
 		{	
-			printf("%s -FC-- %d\t", temp->word, temp->no_of_files);
+			printf("The word ");
+			printf("'%s' is in %d files ", temp->word, temp->no_of_files);
 			temp1 = temp->tab_link;
 			while(temp1)
 			{	
-				printf("File names: %s\t", temp1->file_name);
-				printf("Word count: %d \t", temp1->wcnt);
+				printf(" '%s', ", temp1->file_name);
+				printf("appearing %d times \t", temp1->wcnt);
 				temp1 = temp1->dlink;
 			}
+			printf("\n");
 			temp = temp->word_link;
 		}
 

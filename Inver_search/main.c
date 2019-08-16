@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 	while(1)
 	{
 		int opt;
-		printf("\nChoose the opteration to perform\n1.create Database\n2.print database\n3.Update database\n4.search in database\n5.save database\n6.exit\n");
+		printf("\nChoose the opteration to perform\n1.create Database\n7.print database\n3.Update database\n4.search in database\n5.save database\n6.exit\n");
 		scanf("%d",&opt);
 
 		switch(opt)

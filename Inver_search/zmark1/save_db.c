@@ -25,21 +25,21 @@ int save_db(hash_t array[])
 		fflush(stdin);
 		fprintf(fs, "index: %d\t", i);
 		//	printf("num of files: %d\t",temp->no_of_files);
+		fprintf(fs, "value: ");
 		while(temp)
 		{	
-			fprintf(fs, "\nThe word ");
-			fprintf(fs, "'%s' is in %d files: ", temp->word, temp->no_of_files);
+			fprintf(fs, "%s -FC-- %d\t", temp->word, temp->no_of_files);
 			temp1 = temp->tab_link;
 			while(temp1)
 			{	
-				fprintf(fs, "\n\t\t\t    '%s', ", temp1->file_name);
-				fprintf(fs, "appearing %d times\n", temp1->wcnt);
+				fprintf(fs, "File names: %s\t", temp1->file_name);
+				fprintf(fs, "Word count: %d \t", temp1->wcnt);
 				temp1 = temp1->dlink;
 			}
 			temp = temp->word_link;
 		}
-		fprintf(fs, "****************************************************************************************");
-		//fprintf(fs, "-----------------------------------------------------------------------------------------------------------------");
+
+		fprintf(fs, "\n");
 	}
 	fclose(fs);
 	return SUCCESS;
